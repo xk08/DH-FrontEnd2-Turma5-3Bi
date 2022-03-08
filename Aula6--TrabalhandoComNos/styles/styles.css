@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: rgb(219, 219, 219);
+}
+
+h1 {
+  padding: .5em 1em;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  color: grey;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2em 10%;
+}
+
+.item {
+  width: 30em;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  font-size: 1em;
+  margin-bottom: .2em;
+}
+
+
+/* ------------------------------ Estilos para o tema escuro (Dark-Mode) ----------------------------------------------- */
+
+/* Os seguintes estilos são os que usaremos para aplicar o modo escuro, 
+você terá que modificar os seletores a fim de poder resolver o exercício. */
+
+/* A cor de fundo da página  */
+.body-dark{
+  background-color: rgb(39, 39, 39);
+}
+
+/* Modificações no titulo 'A família dos felinos' */
+.h1-dark{ 
+  background-color: rgb(19, 19, 19);
+  color: rgb(170, 170, 170);
+  border-color: black;
+}
+
+
+/* Modificações nos items */
+.items-dark{
+  background-color: rgb(19, 19, 19);
+  border-color: black;
+}
+
+/* Modificações nos paragrafos dos itens e nos cabeçalhos dos itens */
+.items-text-dark{
+  color: rgb(230, 230, 230);
+}

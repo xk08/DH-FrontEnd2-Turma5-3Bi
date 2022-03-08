@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "Server Chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:5500/?"
+        },
+        {
+            "type": "pwa-chrome",
+            "name": "Local Chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}"
+        },
+        {
+            "type": "firefox",
+            "name": "Server firefox",
+            "request": "launch",
+            "url": "http://127.0.0.1:5500/?"
+        },
+        {
+            "type": "firefox",
+            "name": "Local firefox",
+            "request": "launch",
+            "file": "${workspaceFolder}"
+        },
+    ]
+}
