@@ -33,3 +33,13 @@ li {
   color: rgb(71, 71, 71);
   font-size: 1.1em;
 }
+
+/* Criamos as classes com as caracteristicas que desejamos */
+.novo-li {
+  padding: .5em 2em;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.281);
+  border-radius: 5px;
+  color: rgb(87, 45, 163);
+  font-size: 1.5em;
+}
