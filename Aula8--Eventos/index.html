@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Aula 8 - Eventos </title>
+</head>
+
+<body>
+  <!-- <body onload="exibeAlert()">-->
+  <h1>Aula 8 - Eventos</h1>
+
+  <!-- Elemento pai -->
+  <div id="elementoPai" class="container">
+
+    <form onsubmit="exibeAlert()">
+      <div class="item">
+        <label for="text">Insira seu nome</label>
+        <br>
+        <input type="text" required>
+      </div>
+
+      <div class="item">
+        <label for="text">Insira sua idade</label>
+        <br>
+        <input id="textIdade" type="text" onchange="exibeIdadesInformadas()">
+      </div>
+
+      <div class="item">
+        <button id="botaoEnviar">Enviar</button>
+        <br>
+        <br>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+
+  </div>
+  <script src="scripts/script_aula8.js"></script>
+</body>
+
+</html>
