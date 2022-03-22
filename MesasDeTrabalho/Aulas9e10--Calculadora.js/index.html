@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Aula 10 - Revisão </title>
+</head>
+
+<body>
+
+    <h1>::Calculadora JS::</h1>
+
+    <!-- Elemento pai -->
+    <div id="elementoPai" class="container">
+
+        <form>
+            <div class="item">
+                <label for="text">Qual operação matemática deseja realizar?</label>
+                <br>
+                <br>
+                <button id="idSomar">Somar (+)</button>
+                <button id="idSubtrair">Subtrair (-)</button>
+                <button id="idMultiplicar">Multiplicar (*)</button>
+                <button id="idDividir">Dividir (/)</button>
+            </div>
+
+            <div class="item">
+                <label for="text">Resultado da operação</label>
+                <br>
+                <p id="idParagrafo">0</p>
+                <br>
+                <button id="idBotaoLimpar">Limpar resultado</button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- Faz referência a todos os scripts da calculadora -->
+    <script src="scripts/somar.js"></script>
+    <script src="scripts/subtrair.js"></script>
+    <script src="scripts/multiplicar.js"></script>
+    <script src="scripts/dividir.js"></script>
+
+    <script src="scripts/calculadora.js"></script>
+    <script src="scripts/dom.js"></script>
+</body>
+
+</html>
