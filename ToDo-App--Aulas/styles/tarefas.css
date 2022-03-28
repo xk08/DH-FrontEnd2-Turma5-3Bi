@@ -1,0 +1,244 @@
+@import url('./common.css');
+header {
+  display: flex;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  box-shadow: 0px 3px 5px lightgrey;
+  padding: 0 3em;
+  margin-bottom: 2em;
+}
+
+a {
+  display: block;
+  width: fit-content;
+  padding: .7em 1em;
+  border-bottom: .2em solid white;
+  text-decoration: none;
+  color: white
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: rgb(223, 223, 223);
+}
+
+.user-info p {
+  text-transform: capitalize;
+}
+
+.user-info .user-image {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: white;
+  opacity: .4;
+  margin-left: .7em;
+}
+
+#closeApp{
+  margin-left: 15px;
+  font-size: .7em;
+  background-color: rgb(218, 88, 88);
+  color: white;
+  border-radius: 50vh;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Nova tarefa ----------------------------------------------------------- */
+
+.nova-tarefa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  margin: 0 10%;
+  padding: 1em;
+  box-shadow: 2px 2px 10px lightgrey;
+  border-radius: .2em;
+  z-index: 20;
+}
+
+.nova-tarefa input[type=text] {
+  border: none;
+  flex: 1;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 0;
+  padding: .3em;
+  font-size: 1.1em;
+}
+
+.nova-tarefa input:focus {
+  outline: none;
+  border-bottom: 1px solid grey;
+}
+
+.nova-tarefa input::placeholder {
+  color: rgb(197, 197, 197);
+  text-indent: .2em;
+}
+
+.nova-tarefa button {
+  height: 2em;
+  width: 2em;
+  background-color: transparent;
+  margin-left: 2em;
+  margin-right: 1em;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.nova-tarefa button:hover {
+  opacity: 1;
+}
+
+.nova-tarefa button img {
+  height: 100%;
+  width: 100%;
+}
+
+.not-done {
+  width: 2em;
+  height: 2em;
+  background-color: var(--app-grey);
+  margin-right: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  color: grey;
+}
+
+/* Lista de tarefas ----------------------------------------------------------- */
+
+.tarefas-pendentes {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  list-style: none;
+  margin: 2em 15%;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.tarefa .not-done {
+  position: relative;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: white;
+  box-shadow: 2px 2px 5px lightgrey;
+  border: 2px solid var(--secondary);
+  z-index: 2;
+  transition: background-color 200ms linear;
+}
+
+.tarefa .not-done:hover {
+  background-color: var(--secondary);
+}
+
+.tarefa:first-child .not-done::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: calc(.75em - 1px);
+  display: block;
+  height: 3em;
+  width: 2px;
+  background-color: var(--secondary);
+}
+
+.tarefa:not(:last-child) .not-done::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: calc(.75em - 1px);
+  display: block;
+  height: 4.5em;
+  width: 2px;
+  background-color: var(--secondary);
+}
+
+.tarefa .descricao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  background-color: white;
+  padding: 1em 2em;
+  box-shadow: 2px 2px 5px lightgrey;
+}
+
+.tarefa .nome {
+  color: rgb(95, 95, 95);
+}
+
+.tarefa .timestamp {
+  font-size: .9em;
+  color: rgb(134, 134, 134);
+}
+
+/* Tarefas terminadas ----------------------------------------------------------- */
+
+.titulo-terminadas {
+  position: relative;
+  width: 8em;
+  text-align: center;
+  padding: .5em 1em;
+  background-color: white;
+  border-radius: .2em;
+  box-shadow: 3px 3px 5px lightgrey;
+  color: rgb(170, 170, 170);
+  font-weight: 400;
+  font-size: 1.1em;
+  margin-left: calc(15% - 4em);
+  z-index: 20;
+}
+
+.tarefas-terminadas {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  list-style: none;
+  margin: 2em 15%;
+}
+
+.tarefas-terminadas i{
+  color: grey;
+  background-color: rgb(228, 228, 228);
+}
+.tarefas-terminadas button{
+  margin-left: 10px;
+}
+
+.tarefas-terminadas .tarefa .descricao {
+  background-color: rgb(228, 228, 228);
+}
+
+.tarefas-terminadas .tarefa .descricao .nome {
+  color: grey;
+  text-decoration: line-through;
+}
+
+#skeleton .descricao{
+  background-color: rgb(189, 189, 189);
+}
+#skeleton p{
+  background-color: rgb(214, 214, 214);
+  color: rgb(214, 214, 214);
+}
+#skeleton .not-done{
+  background-color: rgb(189, 189, 189);
+}
+
+#skeleton{
+  animation: trasparencia 1s infinite;
+}
+@keyframes trasparencia {
+  0%{ opacity: 0.5;}
+  100%{ opacity: 0.8;}
+}
