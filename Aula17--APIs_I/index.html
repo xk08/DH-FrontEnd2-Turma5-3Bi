@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Aula 17 - APIS I</title>
+</head>
+
+<body>
+  <h1>Aula 17 - APIS I</h1>
+
+  <!-- Elemento pai -->
+  <div id="elementoPai" class="container">
+
+    <form>
+      <div class="item">
+        <label for="text">Informe a quantidade de imagens que deseja buscar</label>
+        <br>
+        <input id="quantidadeFormulario"  type="text">
+      </div>
+
+      <div class="item">
+        <button id="botaoPesquisar">Buscar</button>
+        <br>
+        <br>
+        <button type="reset" onclick="atualizaPagina()">Limpar</button>
+      </div>
+
+      <div class="item">
+        <label for="text">Imagens encontradas na busca</label>
+        <br>
+        <br>
+        <div id="exibeResultado"></div>
+      
+      </div>
+    </form>
+
+  </div>
+  <script src="scripts/script_aula17.js"></script>
+</body>
+
+</html>
